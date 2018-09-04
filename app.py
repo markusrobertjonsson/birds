@@ -13,6 +13,8 @@ app.layout = html.Div([
     html.Div(id='output-state')
 ])
 
+server = app.server
+
 
 @app.callback(Output('output-state', 'children'),
               [Input('submit-button', 'n_clicks')],
