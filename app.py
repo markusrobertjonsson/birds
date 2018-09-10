@@ -6,7 +6,7 @@ from dash.dependencies import Input, Output, State
 app = dash.Dash()
 
 app.layout = html.Div([
-    dcc.Input(id='input-1-state', type='text', value='Montréal'),
+    dcc.Input(id='input-1-state', type='text', value='Montréal staden'),
     html.Br(),
     dcc.Input(id='input-2-state', type='text', value='Canada'),
     html.Button(id='submit-button', n_clicks=0, children='Submit'),
