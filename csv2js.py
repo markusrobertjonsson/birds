@@ -41,13 +41,15 @@ for i, year in enumerate(sorted_years):
             val = 'null'
         out_matrix[i].append(val)
 
-out = "var arr = [\n"
+out = "var all_birds_with_data = [\n"
 column_headers = list(sorted_birds)
 column_headers.insert(0, 'Year')
 out += str(column_headers) + ',\n'
 for i, year in enumerate(sorted_years):
+    print(type(year))
     row = list(out_matrix[i])
-    row.insert(0, year)
+    # row.insert(0, '"' + str(year) + '"')
+    row.insert(0, "new Date(" + str(year) + ", 1, 1)")
     out += str(row).replace("'", "") + ",\n"
 out += "        ];"
 
